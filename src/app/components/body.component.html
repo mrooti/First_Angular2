@@ -1,0 +1,29 @@
+<div class="container text-center">
+    <h1>Directivas de Angular 2</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <h2>*ngIF</h2>
+            <hr>
+            <button (click)="mostrar=!mostrar"
+            type="button" class="btn btn-outline-primary btn-block">Mostrar/ocultar</button>
+            <hr>
+            <div
+            *ngIf="mostrar"  
+            class="card card-inverse card-primary mb-3 text-center">
+                <div class="card-block">
+                    <blockquote class="card-blockquote">
+                    <p>{{texto}}</p>
+                    <footer>Someone famous in <cite title="Source Title">{{autor}}</cite></footer>
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h2>*ngFor</h2>
+            <ul class="list-group">
+                <li *ngFor="let personaje of personajes; let i=index"  
+                class="list-group-item">{{i+1}} - {{personaje}}</li>
+            </ul>
+        </div>
+    </div>
+</div>
