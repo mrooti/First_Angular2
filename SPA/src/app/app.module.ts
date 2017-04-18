@@ -5,6 +5,10 @@ import { HttpModule } from '@angular/http';
 //Rutas
 import {APP_ROUTING} from './app.routes';
 
+//servicios
+import {HeroesService} from './servicios/heroes.service';
+
+
 //componentes
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -28,7 +32,9 @@ import { ErrorComponent } from './components/error/error.component';
     HttpModule,
     APP_ROUTING
   ],
-  providers: [],
+  providers: [//Aquí van todos los servicios
+    HeroesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
