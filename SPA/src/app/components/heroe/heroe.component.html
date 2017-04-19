@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-lg-4">
+    <img [src]="heroe.img" alt="" class="img-thumbnail">
+  </div>
+  <div class="col-lg-8">
+    <h2>{{heroe.nombre | uppercase}}</h2>
+    <hr>
+    <blockquote class="blockquote blockquote-reverse">
+      <p class="text-justify">{{heroe.bio}}</p>
+      <footer class="blockquote-footer">Primera aparición en <cite title="Source Title">{{heroe.aparicion|date:y}}</cite></footer>
+    </blockquote>
+    <div class="text-right">
+      <a [routerLink]="['/heroes']" class="btn btn-outline-danger">Regresar</a>
+    </div>
+  </div>
+</div>
